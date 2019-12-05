@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FreeNow" target="10" />
+      <module name="FreeNow" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
