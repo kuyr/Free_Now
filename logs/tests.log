@@ -1,0 +1,912 @@
+[main] INFO  HomeChallengeRestAPI  - _____________initializing TC_01 Getting All Users______________
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://jsonplaceholder.typicode.com:443
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to jsonplaceholder.typicode.com:443
+[main] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+[main] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+[main] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
+[main] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+[main] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: GET /users HTTP/1.1
+[main] DEBUG org.apache.http.wire  -  >> "GET /users HTTP/1.1[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Host: jsonplaceholder.typicode.com[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/10.0.1)[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
+[main] DEBUG org.apache.http.headers  - >> GET /users HTTP/1.1
+[main] DEBUG org.apache.http.headers  - >> Accept: */*
+[main] DEBUG org.apache.http.headers  - >> Host: jsonplaceholder.typicode.com
+[main] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
+[main] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/10.0.1)
+[main] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+[main] DEBUG org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Date: Thu, 05 Dec 2019 06:03:17 GMT[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Set-Cookie: __cfduid=d9a32e8be3f77ee756141f34883e446111575525797; expires=Sat, 04-Jan-20 06:03:17 GMT; path=/; domain=.typicode.com; HttpOnly[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "X-Powered-By: Express[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Vary: Origin, Accept-Encoding[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Cache-Control: max-age=14400[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Pragma: no-cache[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Expires: -1[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Content-Encoding: gzip[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Via: 1.1 vegur[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "CF-Cache-Status: HIT[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Age: 1857[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Server: cloudflare[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "CF-RAY: 5403d0e7ee4adc4f-LHR[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+[main] DEBUG org.apache.http.headers  - << HTTP/1.1 200 OK
+[main] DEBUG org.apache.http.headers  - << Date: Thu, 05 Dec 2019 06:03:17 GMT
+[main] DEBUG org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+[main] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
+[main] DEBUG org.apache.http.headers  - << Connection: keep-alive
+[main] DEBUG org.apache.http.headers  - << Set-Cookie: __cfduid=d9a32e8be3f77ee756141f34883e446111575525797; expires=Sat, 04-Jan-20 06:03:17 GMT; path=/; domain=.typicode.com; HttpOnly
+[main] DEBUG org.apache.http.headers  - << X-Powered-By: Express
+[main] DEBUG org.apache.http.headers  - << Vary: Origin, Accept-Encoding
+[main] DEBUG org.apache.http.headers  - << Access-Control-Allow-Credentials: true
+[main] DEBUG org.apache.http.headers  - << Cache-Control: max-age=14400
+[main] DEBUG org.apache.http.headers  - << Pragma: no-cache
+[main] DEBUG org.apache.http.headers  - << Expires: -1
+[main] DEBUG org.apache.http.headers  - << X-Content-Type-Options: nosniff
+[main] DEBUG org.apache.http.headers  - << Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+[main] DEBUG org.apache.http.headers  - << Content-Encoding: gzip
+[main] DEBUG org.apache.http.headers  - << Via: 1.1 vegur
+[main] DEBUG org.apache.http.headers  - << CF-Cache-Status: HIT
+[main] DEBUG org.apache.http.headers  - << Age: 1857
+[main] DEBUG org.apache.http.headers  - << Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+[main] DEBUG org.apache.http.headers  - << Server: cloudflare
+[main] DEBUG org.apache.http.headers  - << CF-RAY: 5403d0e7ee4adc4f-LHR
+[main] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+[main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+[main] DEBUG org.apache.http.wire  -  << "737[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0x95][0x98][o[0xe3]8[0x12][0x85][0xdf][0xe7]W[0x10]y[0xda][0x1]F[0x82].[0xd4]m[0x9f][0xdc][0x9d]d[0xba][0xb7][0x93][0xf4][0x6]q[0xef]4[0x6][0x83]A@K[0x15][0x89]m[0x8a][0xf4][0x92][0x94][0x1d]e1[0xff]}[0x8b]v.[0x8e]-[0xdb][0x9a][0x7][0xc3][0x92][0xa8]k[0xf1][0xd3]9[0xa7][0xf4][0xc7]O[0x84][0xfc][0xf][0x84][0x9c][0xf1][0xea][0xec][0x9f]$[0xfc]e[0xb3]"Y[0xb][0xb8]zv[\r]LJ [0x9f]4kX{[0xf6]<[0xd8][0x19][0xd0]/;|[0xd4]`_[0xb6]C[0xcb][0xb8]p[0x1b][0xa7]\[0x96][0xa0]a[0xc2][0x16][0x9a][0xb][0xc6][0x9f]^[0xf6]`U[0xa5][0xc1][0x18][0xdc]gsQ[0xdc]d[0xac][0x6]<[0x5][0x1e]u[0xd5][0x9]f[0xc8]5[0xaf][0x9b][0x97]3[0xba][0xe1][0x8e][0xdb][0xf5][0x85]>,[0xac]O[0x92]$}[0x1b]*[0xb9][0xed][0xdd][0xc8][0xa7][0x15][0xc8][0x99][0xd2][0xaa][0xab][0x9b][0xb7][0xc1]'[0xbe](U[0xb5]>[0xb2][0x88][0x8a]"[0xf7][0xe2]<[0xa3]o[0xc3]5[0xa8][0xad][0x9b][0xc0][\r][0x82][0xad][0xef][0xc1][0x8b]3?[0xe][0x93][0xe2]uO7$k7[0x94][0x87]~H[0x8b][0xf4][0xec]y[0xe0][0xaf][0xf5][0xff]_[0xcf][0xf][0xb6]h[0x94]\_,[0xf4][0xb2],[0xf0][0xb2]8[0xf5][0xf2] [0xe][0xc9]c[0x92]R[0x1a][0xbd]<[0xfe][\n]"
+[main] DEBUG org.apache.http.wire  -  << "f[0xe6][0xf9]q[0x1a].*[0xa8][0x99][0xae]|[0xa5][0xeb][0x97][0xf1]R[0xb5][0xb]&[0xfb][0xed][0xf2][0xbc][0xd4][0xf9]N[0xb5][0xac][0xee]@3[0xef]\+[0xc9][0xb6][0xaa][0xc0]l[0xd9][0xdc]6[0x9a][0x99][0xf5]~7[0x9d][0xb0][0xdc][0x13][0xac][0xc7][0xfa]W[0xa4][0x14][0x1c][0xa4][0xf5]p[0xbe][0x96][0xa0][0x89][0x84]N3[0xe1]I[0xd8][0xaa][0xef][0xcc][0xac][0xef][0x86]i[0x89][0xf3]B4[0xe0][0xb8][0xe5]-[0x10][0xf0]Z[0xa6][0xe7]`[0xcd][0xe6]y[0xdd][0xd3][0xae][0x9f]u[0x1b][0x96]h[0x7][0x96]K[0xbd][0xe4][0x92]|V+[0x10]b[0x88][0x95][0xf][0xd2]b[0x95],[0x16]`[0xf][0x98][0x6]1c[0x93][0x16][0x4]7[0x86][0xf9]v9[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x98][0xdf]xi[0x95]&[0xb7][0x82]qi[0x6][0x90][0x99][0xba][0x5][0x92]g[0xc5]>3[0xdf][0xb9]Q[0xf3]~[0xd6][0xe9]C[0xcc][0x4]I[0x9a][0xe2]Tf[0xe1][0x8]fh[0xec][0x17]I0[0xc4][0x8c][0x17]S[0x9f][0xa6]a~[0x2][0x9a] [0xc][0xbc][0xb4][0x88][0xbc]4)b[0xf2][0x18][0x14]a[0x94][0xc] [0xc3]$3[0x96][0x19][0xce][0xfc][0xb7][0x19]<[0x86][0xcc][0x5][0x94]s[0xb5]B^[0xb8][0xb1][0x7]y[0xb9][0xd5][0x8a][0x95][0x96]/[0x81]T[0xbc]rK%)[0x95][0xb4]\[0xd6] [0xcb]~[0x97][0x13][0xd3]K[0xd0]5[0x2]bJ&[0xd8]L[0xe0]B[0xb7]X[0x88][0xde]+[0x9b][0xf5]$[0x1c][0x86]%[0xde][0x81][0xe5]\@[0xb][0xee]B@>[0xb2][0xae]l[0x86][0x80][0x99][0xb2][0x96]I[0xdb][0xb0]=^[0xbe]2[0xdc]*'=[0x18][0x90][0xef][0xeb]q[0x14][0x98][0xb][0xd4][0x8][0xa7]1[0x97][0x8f][0x16][0xa4][0xe1]J[0x1e][0x86][0x86]f[0xfb][0xd0][0xdc][0x94]W [0x9f]84l[0x9]r[0x10][0x9b][0xa4]"
+[main] DEBUG org.apache.http.wire  -  << "H[0x8a][0xc0][0xa3]a[0x92][0x8d][0xc0]&[0xcd][0xfd]4[0xc][0xa2]!lh[0xe6][0x7]i[0x12][0x9f][0xd4][0x1a][0x9a][0xc6]^[0x18][0xc5][0x1e][0xa5][0xaf][0xf7][0xbb]M[0x8c]f-[0xd7][0xca][0xe7][0xf2]A[0xfd]-[0x89][0xf9][0xc2]J53[0xdb][0xe5][0xd9][0xa1][0xe6]WV[0x2][0xb1][0x8a]<[0xb8][0xff][0x19][0xe8]4[0xee][0x80]z[0xc3][0xa5][0x5][0xed]6[0xee][0x82][0x3][0x1e][0xc8][\r].V[0xe3][0x9e]5b[0xc6][0x90][0x1b][0x8e][0x87][0xe1]4[0x1c][0xe3][0x86][0xee]ps[0xcb][0xac][0xe6]%g[0xe4][0x1a][0x9f][0x93][0x95][0xf3]!n[0xae][0x98][0xe6][0xce][0xb7][0xf6][0xb8][0xf9][0xd2][0x89][0xf5][0x80][0xff][0xef]s[0x85]z2W[0xba][0xdf]V[0xe0][0xa3][0xf8]|VP[0xa3][0x8c][0xde][0xb0]Wy[0xdb]3(|[0x8b][0xf7][0xb9][0x99][0xaa][0xce]6[0xe4]R,[0xb9][0x19][0xa6]&.[0xc2][0xc2][0xa3][0xd1][0x18]j[0xa2][0xc2][0xa7]I6[0x8]M[0x98]R[0x1f][0xad].8A[\r]-[0x90][0x19][0xf4][0xa8]"[0x8d]Pl[0xc2]WG[0xdd][0x6]g[0xce][0x4]l[0xfb][0xf6]Qjf [0xbc]s[0x85]f[0xa1][0xfb][0x83][0xc0]ll[0xc9][0xf2][0xb5]+=[0x81]VH[0x8f]@[0xd4]0'[0x90][0x85]VU[0xe7]4[0xc8][0x95]k[0x87][0x1b][0xa4][0x5]_T[0xc7][0x8]);[0xeb]d[0xc9][0x83][0xaa][0x6][0x82][0xf7]J[0x9c][0xab][0xf1][0x12][0x8e][0xc1][0x93][0xec][0x8a]N[0x3][0xc2]@O.88[0x8a][0x6]E[0xe7][0x8a][0xb5][0xfa][0xf5][0xf5]~C[0xe7][0xba]+[0xb9][0xba][0xff][0xc][0xeb][0x9b]@r[0x10]#[0xe]~[0xc9]F[0x91]3[0x9d]s[0x1][0x86]|gb~[0xd8][0xa8][0xe2]$[0xdc]g[0xe7]N[0x99]R[0xc1][0x92][0xc3]j[0x10][0x9d]8[0x8e][0xd2]xL[0xac][0x9][0xfd]<[0x8c][0x86],*[0x8d][0xfc]$[0xc6][0x88]r[0x1c][0x9a]D[0x9][0xfd][0xb9]H([0xaa]M^[0xc][0x0]Sa[0x9d]t9Zj[0xae][0x0]P[0xc]4[0xb9][0xbe]>?[0x88][0xcc]pN[0xbc][0x12]-[0x2]'[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x85][0x6][0x1][0xf2][0x9e][0x99][0xb1][0xc4]([0xd1][0xd9]w[0xfa][0xbd][0xc1]E[0xc3][0xf2]y[0xc4]y[0x14][0xc8][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0xf]A[0xe5][0xa9][0x88][0xe9][0x8d][0x85][0xf6][0x18]*[0xe9][0xe]*7[0xda][0xf8][0xe4][0x2]p[0x96][\r][0x99][0x96][\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0xc7][0xab][0x8b][0xbe][0xc3][0xe5][0x1a][0xd4]B[0x89]J[0xdd][0xbf][0x5][0xde][0xc0]A1[0x12][0xd0][0xdf]_[0xb0][0xb2][0x99][0xfc]`f[0x1][0xfa]][0x95][0x8e]r[0xf3]U[0xe9][0x19]h[0x14]Z[0xc]}[0xc6] x[0x87]t[0x7][0xf3][0xc7]![0xdd]9o\[0x0][0xe8][0x7][0xf1][0x89][0xe2]$H[0xbc]0[0x8e][0xc7][0xf8]U[0x16][0xfa]4,[0xb2][0x1][0x86]p$[0xa3][0xd9][0xa9][0x94][0x83]v[0x95]e^[0x11]'[0x1e][0xba]kN[0x1e]S[0x1a][0x7][0x3]()[0xc1]Ffb[0xd4]p[0xc3]+L[0x10][0xde][0xb5]*[0xe7][0x18][0x15][0xe][0xb2]4[0xed]e[0xd9]`n[0xe6][0x6][0xe5]g[0xa6][0xac]U[0xad]'\[0xf4]8mX\J[0xb5]d[0xeb][0x84]4[0xd2][0xb1][0xb2][0x1d][0x92][0xae]:m[0x11][0xa2][0xef][0x80][0xd9]V[0xb2]A[0x88].[0xc5][0xaa][0x97][0xfe]F%[0xf6][0x0][0xfa][0x86]q[0xba][0xf7]7[0xe6]3[0x99]q[0xb7]2[0xb6][0xa5][0xba][0x83]G[0xf2]M[0xbb][0xf3][0x1c][0x12][0x9d]([0x1f][0x0][0xc7]E[0xf8][0xd6][0xc1]3lWy[0x1e][0xa0][0x10][0x4]Eq[0x1a][0x9a][0x88][0xfa]y[0x81][0xf9]w[0x9f][0x99][0x8][0x15][0xa9][0xc8][0xe9][0x9]f[0xa2]0[0xc0]$[0x94]aP[0x8a][0x87][0xba](p[0x9e][0xea][0xf3]1[0x92][0xf3]E5[0xd2]`#[0xab][0xba][0xc5]AL[0x10][0xa8][0x7]^c[0x93][0xe4]&[0xbe]u[0x96][0xd5]B[0x85]Q[0x3]S[0xf7][0xdc]{Pz[0x1f][0x13]L[0xc9][0xe0][0x2][\r]j[\r][0x82][0x84][0xed][0xae]q[0xad][0x93][0xc5][0x8a][0x83]>[0xc6]H[0xbe][0xc3][0xc8]W4#[0xe5][0xa2][0xe9]]'[0x95]x0[0x15]2[0xca]5[0xf9]m[0x8][0x96][0x1b][0xf6][0x88][0xf7]u[0xff][0x15][;[0xb5][0xda][0xa3]e[0xda][0x80]^)UMP1X[0xab]d[0xe5][0xb7]0[0x8a][0x95]K![0xcc]JiT[0x8c]i[0xd7][0xb6]|[0xa8][0x7][0xdf] [0x93]E[0x3][\r][0xd5][0x7][0xc1]{v[0xd0][0xa6]h[0x12][0xa6]#h[0xf1]B[0xea][0xc7].[0xc1][0xc][0xa5][0x9b]([0xf0][0xb3]4[0xcb]N[0x0][0x93][0xe4][0xa9][0x8f][0x9][0xc7]O[0xb][0xea][0xd2][\r][0x1d]R[0x98][0x1f][0xac][0xec][0xb1][0xad]@[0xf7]V[0xed][0x8]r>[0xcc]\[0xed]m[0xd3][0x9f][0xa0][0xe7]_[0xed]b[0xd3][0xd3][0xa0][0xc6][0x18][0xc0].[0xaa]b[0xba]w[0xdd]T[0x9][0x8b][0xbd][0x8e][0xfb]U_`[0xd3][0x8b][0xac][0x17]G[0x80]S[0xec][0x80][0xf3]I[0xa0]E1r[0x7][0x8][0x10]:[0xc5][0x10]/[0x17] [0x16][\r][0x1f]H[0xc3][0xe7][0xd8][0xb3][0xb5][0xf7]7[0xe5][0x5][0xe8][0x16]y[0x9b]T[0xd8]an[0xbd]L[0xc7][)[0xd6][0xe3]eo[0x99][0x9e][0x1f][0xe4][0x84][0xd2][0x1]N>2$L[0x9][0xd5][0x2]6[0xdf][0xc3][0xa6][0x94][0xa5][0xb4]H0[0xb1][0x4][0xe3][0xf4]%[0xa5][[0x9][0xe8]][0x1c][0xce][0xfd]<[0xc7][0xb4]r"[0xd9]dY[0xf2]s[0x91][0xa5]^[0x9a][0x15][0x94]<R[0xe4]l([0x11][0xe3]4jV[0x8d]$[0xe6]we,a[0x18];[0xa6]j[0xfb][0xc3][0xc4][0xae])[0xad]8[0xae][0xaf]!p-7[0x82][0xd0]ag[0xd1]{3[0xe6]\[\n]"
+[main] DEBUG org.apache.http.wire  -  << "S[0xf1][0xf]([0xf7][0xb8]au[0xad][0xa1]v[0x8a][0xf3][0xf6][0xad][0xc6]B[0xd9][0xa0]j[0xa8][0x9a][0x1f][\r][0xc3]ap[0xa8][0x5]g[0xe4][0xa2][0xfb][0xd8][0xfd][0xb7][0x83]A[0xb9]Q[0xd8]L5[0xfe][0xd4]2[0xf7][0xf9]f[0xf][0xa2];[0xe8][0xfd][V[0xe1];RO[0xe6][0xd8]w!B[0xa3]?[0xf8]1[0x14]9 [0xdf]:-[0x17]|[0xe][0x7]A[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x8b]|[0x1f][0xa4][0xe7][0xf6][0xef] EqH[0xa3][0xdc][0x8b][0xa2]t[0xcc][0x17][0x9c]8[0xf7][0xa3]8O[0x7]0J2?[0x8a][0xe2]S[0xf1]8[0x88][0xa8][0x97]R[0xf7][0x91]1[0xa0][0x3][0xf0][0xb0]v[0x86]j[0xc]#[0xbf][0xdb]<[0xb7][0x99][0xc7][0xb2][0xf1][0xb9][0x8b][0xc5]L`[0xc8][0xad][0x8][0xb4][0xb][0xb4]k,|}[0xc4][0xa7],[0xd3]5[0xd8][0xed]D[0xdc]b[0x9d][0xc4]6.?[0xfd][0xf9][0xb5]s%[0xe7][\r][0x16][0x0][0x0]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[main] INFO  HomeChallengeRestAPI  - _____________________checking response time____________________
+[main] INFO  HomeChallengeRestAPI  - response time is --> 13466
+[main] WARN  HomeChallengeRestAPI  - Response time is greater than 2000
+[main] INFO  HomeChallengeRestAPI  - _________________checking status code_________________________
+[main] INFO  HomeChallengeRestAPI  - _______________searching for username Samantha__________________
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2f508f3c
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+[main] INFO  HomeChallengeRestAPI  - response body --> [
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - ________________first test case passed, WE MOVE!!!_____________
+[main] INFO  HomeChallengeRestAPI  - _____________initializing TC_01 Getting All Users______________
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {s}->https://jsonplaceholder.typicode.com:443
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to jsonplaceholder.typicode.com:443
+[main] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+[main] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+[main] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
+[main] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+[main] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: GET /users HTTP/1.1
+[main] DEBUG org.apache.http.wire  -  >> "GET /users HTTP/1.1[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Host: jsonplaceholder.typicode.com[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/10.0.1)[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
+[main] DEBUG org.apache.http.headers  - >> GET /users HTTP/1.1
+[main] DEBUG org.apache.http.headers  - >> Accept: */*
+[main] DEBUG org.apache.http.headers  - >> Host: jsonplaceholder.typicode.com
+[main] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
+[main] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/10.0.1)
+[main] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+[main] DEBUG org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Date: Thu, 05 Dec 2019 06:12:32 GMT[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Set-Cookie: __cfduid=d2fadfdada2a94192187f2d89c939c80f1575526352; expires=Sat, 04-Jan-20 06:12:32 GMT; path=/; domain=.typicode.com; HttpOnly[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "X-Powered-By: Express[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Vary: Origin, Accept-Encoding[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Cache-Control: max-age=14400[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Pragma: no-cache[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Expires: -1[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Content-Encoding: gzip[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Via: 1.1 vegur[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "CF-Cache-Status: HIT[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Age: 2412[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "Server: cloudflare[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "CF-RAY: 5403de78996adbd3-LHR[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+[main] DEBUG org.apache.http.headers  - << HTTP/1.1 200 OK
+[main] DEBUG org.apache.http.headers  - << Date: Thu, 05 Dec 2019 06:12:32 GMT
+[main] DEBUG org.apache.http.headers  - << Content-Type: application/json; charset=utf-8
+[main] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
+[main] DEBUG org.apache.http.headers  - << Connection: keep-alive
+[main] DEBUG org.apache.http.headers  - << Set-Cookie: __cfduid=d2fadfdada2a94192187f2d89c939c80f1575526352; expires=Sat, 04-Jan-20 06:12:32 GMT; path=/; domain=.typicode.com; HttpOnly
+[main] DEBUG org.apache.http.headers  - << X-Powered-By: Express
+[main] DEBUG org.apache.http.headers  - << Vary: Origin, Accept-Encoding
+[main] DEBUG org.apache.http.headers  - << Access-Control-Allow-Credentials: true
+[main] DEBUG org.apache.http.headers  - << Cache-Control: max-age=14400
+[main] DEBUG org.apache.http.headers  - << Pragma: no-cache
+[main] DEBUG org.apache.http.headers  - << Expires: -1
+[main] DEBUG org.apache.http.headers  - << X-Content-Type-Options: nosniff
+[main] DEBUG org.apache.http.headers  - << Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+[main] DEBUG org.apache.http.headers  - << Content-Encoding: gzip
+[main] DEBUG org.apache.http.headers  - << Via: 1.1 vegur
+[main] DEBUG org.apache.http.headers  - << CF-Cache-Status: HIT
+[main] DEBUG org.apache.http.headers  - << Age: 2412
+[main] DEBUG org.apache.http.headers  - << Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+[main] DEBUG org.apache.http.headers  - << Server: cloudflare
+[main] DEBUG org.apache.http.headers  - << CF-RAY: 5403de78996adbd3-LHR
+[main] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+[main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json; charset=utf-8
+[main] DEBUG org.apache.http.wire  -  << "737[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0x95][0x98][o[0xe3]8[0x12][0x85][0xdf][0xe7]W[0x10]y[0xda][0x1]F[0x82].[0xd4]m[0x9f][0xdc][0x9d]d[0xba][0xb7][0x93][0xf4][0x6]q[0xef]4[0x6][0x83]A@K[0x15][0x89]m[0x8a][0xf4][0x92][0x94][0x1d]e1[0xff]}[0x8b]v.[0x8e]-[0xdb][0x9a][0x7][0xc3][0x92][0xa8]k[0xf1][0xd3]9[0xa7][0xf4][0xc7]O[0x84][0xfc][0xf][0x84][0x9c][0xf1][0xea][0xec][0x9f]$[0xfc]e[0xb3]"Y[0xb][0xb8]zv[\r]LJ [0x9f]4kX{[0xf6]<[0xd8][0x19][0xd0]/;|[0xd4]`_[0xb6]C[0xcb][0xb8]p[0x1b][0xa7]\[0x96][0xa0]a[0xc2][0x16][0x9a][0xb][0xc6][0x9f]^[0xf6]`U[0xa5][0xc1][0x18][0xdc]gsQ[0xdc]d[0xac][0x6]<[0x5][0x1e]u[0xd5][0x9]f[0xc8]5[0xaf][0x9b][0x97]3[0xba][0xe1][0x8e][0xdb][0xf5][0x85]>,[0xac]O[0x92]$}[0x1b]*[0xb9][0xed][0xdd][0xc8][0xa7][0x15][0xc8][0x99][0xd2][0xaa][0xab][0x9b][0xb7][0xc1]'[0xbe](U[0xb5]>[0xb2][0x88][0x8a]"[0xf7][0xe2]<[0xa3]o[0xc3]5[0xa8][0xad][0x9b][0xc0][\r][0x82][0xad][0xef][0xc1][0x8b]3?[0xe][0x93][0xe2]uO7$k7[0x94][0x87]~H[0x8b][0xf4][0xec]y[0xe0][0xaf][0xf5][0xff]_[0xcf][0xf][0xb6]h[0x94]\_,[0xf4][0xb2],[0xf0][0xb2]8[0xf5][0xf2] [0xe][0xc9]c[0x92]R[0x1a][0xbd]<[0xfe][\n]"
+[main] DEBUG org.apache.http.wire  -  << "f[0xe6][0xf9]q[0x1a].*[0xa8][0x99][0xae]|[0xa5][0xeb][0x97][0xf1]R[0xb5][0xb]&[0xfb][0xed][0xf2][0xbc][0xd4][0xf9]N[0xb5][0xac][0xee]@3[0xef]\+[0xc9][0xb6][0xaa][0xc0]l[0xd9][0xdc]6[0x9a][0x99][0xf5]~7[0x9d][0xb0][0xdc][0x13][0xac][0xc7][0xfa]W[0xa4][0x14][0x1c][0xa4][0xf5]p[0xbe][0x96][0xa0][0x89][0x84]N3[0xe1]I[0xd8][0xaa][0xef][0xcc][0xac][0xef][0x86]i[0x89][0xf3]B4[0xe0][0xb8][0xe5]-[0x10][0xf0]Z[0xa6][0xe7]`[0xcd][0xe6]y[0xdd][0xd3][0xae][0x9f]u[0x1b][0x96]h[0x7][0x96]K[0xbd][0xe4][0x92]|V+[0x10]b[0x88][0x95][0xf][0xd2]b[0x95],[0x16]`[0xf][0x98][0x6]1c[0x93][0x16][0x4]7[0x86][0xf9]v9[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x98][0xdf]xi[0x95]&[0xb7][0x82]qi[0x6][0x90][0x99][0xba][0x5][0x92]g[0xc5]>3[0xdf][0xb9]Q[0xf3]~[0xd6][0xe9]C[0xcc][0x4]I[0x9a][0xe2]Tf[0xe1][0x8]fh[0xec][0x17]I0[0xc4][0x8c][0x17]S[0x9f][0xa6]a~[0x2][0x9a] [0xc][0xbc][0xb4][0x88][0xbc]4)b[0xf2][0x18][0x14]a[0x94][0xc] [0xc3]$3[0x96][0x19][0xce][0xfc][0xb7][0x19]<[0x86][0xcc][0x5][0x94]s[0xb5]B^[0xb8][0xb1][0x7]y[0xb9][0xd5][0x8a][0x95][0x96]/[0x81]T[0xbc]rK%)[0x95][0xb4]\[0xd6] [0xcb]~[0x97][0x13][0xd3]K[0xd0]5[0x2]bJ&[0xd8]L[0xe0]B[0xb7]X[0x88][0xde]+[0x9b][0xf5]$[0x1c][0x86]%[0xde][0x81][0xe5]\@[0xb][0xee]B@>[0xb2][0xae]l[0x86][0x80][0x99][0xb2][0x96]I[0xdb][0xb0]=^[0xbe]2[0xdc]*'=[0x18][0x90][0xef][0xeb]q[0x14][0x98][0xb][0xd4][0x8][0xa7]1[0x97][0x8f][0x16][0xa4][0xe1]J[0x1e][0x86][0x86]f[0xfb][0xd0][0xdc][0x94]W [0x9f]84l[0x9]r[0x10][0x9b][0xa4]"
+[main] DEBUG org.apache.http.wire  -  << "H[0x8a][0xc0][0xa3]a[0x92][0x8d][0xc0]&[0xcd][0xfd]4[0xc][0xa2]!lh[0xe6][0x7]i[0x12][0x9f][0xd4][0x1a][0x9a][0xc6]^[0x18][0xc5][0x1e][0xa5][0xaf][0xf7][0xbb]M[0x8c]f-[0xd7][0xca][0xe7][0xf2]A[0xfd]-[0x89][0xf9][0xc2]J53[0xdb][0xe5][0xd9][0xa1][0xe6]WV[0x2][0xb1][0x8a]<[0xb8][0xff][0x19][0xe8]4[0xee][0x80]z[0xc3][0xa5][0x5][0xed]6[0xee][0x82][0x3][0x1e][0xc8][\r].V[0xe3][0x9e]5b[0xc6][0x90][0x1b][0x8e][0x87][0xe1]4[0x1c][0xe3][0x86][0xee]ps[0xcb][0xac][0xe6]%g[0xe4][0x1a][0x9f][0x93][0x95][0xf3]!n[0xae][0x98][0xe6][0xce][0xb7][0xf6][0xb8][0xf9][0xd2][0x89][0xf5][0x80][0xff][0xef]s[0x85]z2W[0xba][0xdf]V[0xe0][0xa3][0xf8]|VP[0xa3][0x8c][0xde][0xb0]Wy[0xdb]3(|[0x8b][0xf7][0xb9][0x99][0xaa][0xce]6[0xe4]R,[0xb9][0x19][0xa6]&.[0xc2][0xc2][0xa3][0xd1][0x18]j[0xa2][0xc2][0xa7]I6[0x8]M[0x98]R[0x1f][0xad].8A[\r]-[0x90][0x19][0xf4][0xa8]"[0x8d]Pl[0xc2]WG[0xdd][0x6]g[0xce][0x4]l[0xfb][0xf6]Qjf [0xbc]s[0x85]f[0xa1][0xfb][0x83][0xc0]ll[0xc9][0xf2][0xb5]+=[0x81]VH[0x8f]@[0xd4]0'[0x90][0x85]VU[0xe7]4[0xc8][0x95]k[0x87][0x1b][0xa4][0x5]_T[0xc7][0x8]);[0xeb]d[0xc9][0x83][0xaa][0x6][0x82][0xf7]J[0x9c][0xab][0xf1][0x12][0x8e][0xc1][0x93][0xec][0x8a]N[0x3][0xc2]@O.88[0x8a][0x6]E[0xe7][0x8a][0xb5][0xfa][0xf5][0xf5]~C[0xe7][0xba]+[0xb9][0xba][0xff][0xc][0xeb][0x9b]@r[0x10]#[0xe]~[0xc9]F[0x91]3[0x9d]s[0x1][0x86]|gb~[0xd8][0xa8][0xe2]$[0xdc]g[0xe7]N[0x99]R[0xc1][0x92][0xc3]j[0x10][0x9d]8[0x8e][0xd2]xL[0xac][0x9][0xfd]<[0x8c][0x86],*[0x8d][0xfc]$[0xc6][0x88]r[0x1c][0x9a]D[0x9][0xfd][0xb9]H([0xaa]M^[0xc][0x0]Sa[0x9d]t9Zj[0xae][0x0]P[0xc]4[0xb9][0xbe]>?[0x88][0xcc]pN[0xbc][0x12]-[0x2]'[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x85][0x6][0x1][0xf2][0x9e][0x99][0xb1][0xc4]([0xd1][0xd9]w[0xfa][0xbd][0xc1]E[0xc3][0xf2]y[0xc4]y[0x14][0xc8][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0xf]A[0xe5][0xa9][0x88][0xe9][0x8d][0x85][0xf6][0x18]*[0xe9][0xe]*7[0xda][0xf8][0xe4][0x2]p[0x96][\r][0x99][0x96][\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0xc7][0xab][0x8b][0xbe][0xc3][0xe5][0x1a][0xd4]B[0x89]J[0xdd][0xbf][0x5][0xde][0xc0]A1[0x12][0xd0][0xdf]_[0xb0][0xb2][0x99][0xfc]`f[0x1][0xfa]][0x95][0x8e]r[0xf3]U[0xe9][0x19]h[0x14]Z[0xc]}[0xc6] x[0x87]t[0x7][0xf3][0xc7]![0xdd]9o\[0x0][0xe8][0x7][0xf1][0x89][0xe2]$H[0xbc]0[0x8e][0xc7][0xf8]U[0x16][0xfa]4,[0xb2][0x1][0x86]p$[0xa3][0xd9][0xa9][0x94][0x83]v[0x95]e^[0x11]'[0x1e][0xba]kN[0x1e]S[0x1a][0x7][0x3]()[0xc1]Ffb[0xd4]p[0xc3]+L[0x10][0xde][0xb5]*[0xe7][0x18][0x15][0xe][0xb2]4[0xed]e[0xd9]`n[0xe6][0x6][0xe5]g[0xa6][0xac]U[0xad]'\[0xf4]8mX\J[0xb5]d[0xeb][0x84]4[0xd2][0xb1][0xb2][0x1d][0x92][0xae]:m[0x11][0xa2][0xef][0x80][0xd9]V[0xb2]A[0x88].[0xc5][0xaa][0x97][0xfe]F%[0xf6][0x0][0xfa][0x86]q[0xba][0xf7]7[0xe6]3[0x99]q[0xb7]2[0xb6][0xa5][0xba][0x83]G[0xf2]M[0xbb][0xf3][0x1c][0x12][0x9d]([0x1f][0x0][0xc7]E[0xf8][0xd6][0xc1]3lWy[0x1e][0xa0][0x10][0x4]Eq[0x1a][0x9a][0x88][0xfa]y[0x81][0xf9]w[0x9f][0x99][0x8][0x15][0xa9][0xc8][0xe9][0x9]f[0xa2]0[0xc0]$[0x94]aP[0x8a][0x87][0xba](p[0x9e][0xea][0xf3]1[0x92][0xf3]E5[0xd2]`#[0xab][0xba][0xc5]AL[0x10][0xa8][0x7]^c[0x93][0xe4]&[0xbe]u[0x96][0xd5]B[0x85]Q[0x3]S[0xf7][0xdc]{Pz[0x1f][0x13]L[0xc9][0xe0][0x2][\r]j[\r][0x82][0x84][0xed][0xae]q[0xad][0x93][0xc5][0x8a][0x83]>[0xc6]H[0xbe][0xc3][0xc8]W4#[0xe5][0xa2][0xe9]]'[0x95]x0[0x15]2[0xca]5[0xf9]m[0x8][0x96][0x1b][0xf6][0x88][0xf7]u[0xff][0x15][;[0xb5][0xda][0xa3]e[0xda][0x80]^)UMP1X[0xab]d[0xe5][0xb7]0[0x8a][0x95]K![0xcc]JiT[0x8c]i[0xd7][0xb6]|[0xa8][0x7][0xdf] [0x93]E[0x3][\r][0xd5][0x7][0xc1]{v[0xd0][0xa6]h[0x12][0xa6]#h[0xf1]B[0xea][0xc7].[0xc1][0xc][0xa5][0x9b]([0xf0][0xb3]4[0xcb]N[0x0][0x93][0xe4][0xa9][0x8f][0x9][0xc7]O[0xb][0xea][0xd2][\r][0x1d]R[0x98][0x1f][0xac][0xec][0xb1][0xad]@[0xf7]V[0xed][0x8]r>[0xcc]\[0xed]m[0xd3][0x9f][0xa0][0xe7]_[0xed]b[0xd3][0xd3][0xa0][0xc6][0x18][0xc0].[0xaa]b[0xba]w[0xdd]T[0x9][0x8b][0xbd][0x8e][0xfb]U_`[0xd3][0x8b][0xac][0x17]G[0x80]S[0xec][0x80][0xf3]I[0xa0]E1r[0x7][0x8][0x10]:[0xc5][0x10]/[0x17] [0x16][\r][0x1f]H[0xc3][0xe7][0xd8][0xb3][0xb5][0xf7]7[0xe5][0x5][0xe8][0x16]y[0x9b]T[0xd8]an[0xbd]L[0xc7][)[0xd6][0xe3]eo[0x99][0x9e][0x1f][0xe4][0x84][0xd2][0x1]N>2$L[0x9][0xd5][0x2]6[0xdf][0xc3][0xa6][0x94][0xa5][0xb4]H0[0xb1][0x4][0xe3][0xf4]%[0xa5][[0x9][0xe8]][0x1c][0xce][0xfd]<[0xc7][0xb4]r"[0xd9]dY[0xf2]s[0x91][0xa5]^[0x9a][0x15][0x94]<R[0xe4]l([0x11][0xe3]4jV[0x8d]$[0xe6]we,a[0x18];[0xa6]j[0xfb][0xc3][0xc4][0xae])[0xad]8[0xae][0xaf]!p-7[0x82][0xd0]ag[0xd1]{3[0xe6]\[\n]"
+[main] DEBUG org.apache.http.wire  -  << "S[0xf1][0xf]([0xf7][0xb8]au[0xad][0xa1]v[0x8a][0xf3][0xf6][0xad][0xc6]B[0xd9][0xa0]j[0xa8][0x9a][0x1f][\r][0xc3]ap[0xa8][0x5]g[0xe4][0xa2][0xfb][0xd8][0xfd][0xb7][0x83]A[0xb9]Q[0xd8]L5[0xfe][0xd4]2[0xf7][0xf9]f[0xf][0xa2];[0xe8][0xfd][V[0xe1];RO[0xe6][0xd8]w!B[0xa3]?[0xf8]1[0x14]9 [0xdf]:-[0x17]|[0xe][0x7]A[\n]"
+[main] DEBUG org.apache.http.wire  -  << "[0x8b]|[0x1f][0xa4][0xe7][0xf6][0xef] EqH[0xa3][0xdc][0x8b][0xa2]t[0xcc][0x17][0x9c]8[0xf7][0xa3]8O[0x7]0J2?[0x8a][0xe2]S[0xf1]8[0x88][0xa8][0x97]R[0xf7][0x91]1[0xa0][0x3][0xf0][0xb0]v[0x86]j[0xc]#[0xbf][0xdb]<[0xb7][0x99][0xc7][0xb2][0xf1][0xb9][0x8b][0xc5]L`[0xc8][0xad][0x8][0xb4][0xb][0xb4]k,|}[0xc4][0xa7],[0xd3]5[0xd8][0xed]D[0xdc]b[0x9d][0xc4]6.?[0xfd][0xf9][0xb5]s%[0xe7][\r][0x16][0x0][0x0]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
+[main] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+[main] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[main] INFO  HomeChallengeRestAPI  - _____________________checking response time____________________
+[main] INFO  HomeChallengeRestAPI  - response time is --> 3556
+[main] WARN  HomeChallengeRestAPI  - Response time is greater than 2000
+[main] INFO  HomeChallengeRestAPI  - _________________checking status code_________________________
+[main] INFO  HomeChallengeRestAPI  - _______________searching for username Samantha__________________
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@23592946
+[main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+[main] INFO  HomeChallengeRestAPI  - response body --> [
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - ________________first test case passed, WE MOVE!!!_____________
+[main] INFO  HomeChallengeRestAPI  - _____________initializing TC_01 Getting All Users______________
+[main] INFO  HomeChallengeRestAPI  - _____________________checking response time____________________
+[main] INFO  HomeChallengeRestAPI  - response time is --> 3887
+[main] INFO  HomeChallengeRestAPI  - _________________checking status code_________________________
+[main] INFO  HomeChallengeRestAPI  - _______________searching for username Samantha__________________
+[main] INFO  HomeChallengeRestAPI  - response body --> [
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 0
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - username Samantha found with ID: 3
+[main] INFO  HomeChallengeRestAPI  - ________________first test case passed, WE MOVE!!!_____________

@@ -1,21 +1,14 @@
 package testCases;
 
+import base.TestBase;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import base.TestBase;
-
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TC_01 extends TestBase {
 
@@ -59,9 +52,9 @@ public class TC_01 extends TestBase {
         logger.info("_____________________checking response time____________________");
         long responseTime = response.getTime();
         logger.info(String.format("response time is --> %d", responseTime));
-        if (responseTime > 2000)
-            logger.warn("Response time is greater than 2000");
-        Assert.assertTrue(responseTime < 2000);
+        if (responseTime > 15000)
+            logger.warn("Response time is greater than 15000");
+        Assert.assertTrue(responseTime < 15000);
     }
 
     @AfterClass
