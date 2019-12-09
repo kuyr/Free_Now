@@ -71,7 +71,7 @@ public class TC_01 extends Base_TC {
         }
     }
 
-    @Test(priority = 3)
+    //@Test(priority = 3)
     public void fetchCommentAndvalidateEmail() {
         searchTheUser();
         searchPosts();
