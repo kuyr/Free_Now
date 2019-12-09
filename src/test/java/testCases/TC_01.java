@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 
 import constants.*;
 import DataTransferObject.*;
+import org.testng.collections.CollectionUtils;
 
 import static org.testng.collections.CollectionUtils.*;
 
@@ -61,7 +62,7 @@ public class TC_01 extends Base_TC {
 
             postList = this.requestGET(URI, param, usernameSearchResponseDTO.class);
             if (hasElements(postList)) {
-                LOGGER.info(String.format("Username %s has posts %d", dataConstants.USERNAME, postList.size()));
+                LOGGER.info(String.format("Username %s has  %d posts", dataConstants.USERNAME, postList.size()));
             } else {
                 LOGGER.warning(String.format("Username %s doesn't have any posts", dataConstants.USERNAME));
             }
@@ -81,7 +82,7 @@ public class TC_01 extends Base_TC {
                 param.put(dataConstants.PARAM_POST_ID, String.valueOf(k.getId()));
                 List<userPostCommentResponseDTO> commentList = this.requestGET(URI, param, userPostCommentResponseDTO.class);
 
-                if (hasElements(commentList)) {
+                if (commentList != null && CollectionUtils.hasElements(commentList)) {
                     List<String> emailList = commentList.stream().map(userPostCommentResponseDTO::getEmail)
                             .collect(Collectors.toList());
                     this.validateEmailPattern(emailList);
@@ -91,10 +92,12 @@ public class TC_01 extends Base_TC {
                     LOGGER.warning(String.format("PostID %s doesn't have any comments", k.getId()));
                 }
             });
-        } else {
+        }else {
             LOGGER.warning(String.format("Username %s doesn't have any posts", dataConstants.USERNAME));
         }
     }
+
+    // validate email using RegEx.
     protected void validateEmailPattern(List<String> email) {
         Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile(dataConstants.EMAIL_REGEX,
                 Pattern.CASE_INSENSITIVE);
@@ -103,7 +106,7 @@ public class TC_01 extends Base_TC {
                 Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(k);
                 Assert.assertTrue(matcher.find(), "Email syntax is not valid");
             });
-        } else {
+        }else {
             LOGGER.info("Email List received is empty");
         }
     }
