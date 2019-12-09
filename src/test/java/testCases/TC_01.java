@@ -1,110 +1,111 @@
 package testCases;
 
-import base.TestBase;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
 import io.restassured.RestAssured;
-import io.restassured.http.Method;
-import org.json.JSONArray;
-import org.json.JSONObject;
+
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TC_01 extends TestBase {
+import constants.*;
+import DataTransferObject.*;
+
+import static org.testng.collections.CollectionUtils.*;
+
+
+public class TC_01 extends Base_TC {
+
+    private usernameSearchResponseDTO user;
+    private List<userPostResponseDTO> postList;
+    private Map<String, String> param;
+
+    public static String URI;
 
     @BeforeClass
-    void getAllUsers() {
-        logger.info("_____________initializing TC_01 Getting All Users______________");
-        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
-        httpRequest = RestAssured.given();
-        response = httpRequest.request(Method.GET, "/users");
-
+    public void setUp() {
+        RestAssured.baseURI = dataConstants.BASE_URI;
     }
 
-    @Test
-    void checkStatusCode() {
-        logger.info("_________________checking status code_________________________");
-        int statusCode = response.getStatusCode();
-        Assert.assertEquals(statusCode, 200);
-    }
 
-    @Test
-    void getUsername() {
-        logger.info("_______________searching for username Samantha__________________");
-        String responseBody = response.getBody().asString();
-        logger.info(String.format("response body --> %s", responseBody));
-        Assert.assertTrue(responseBody.contains("Samantha"));
-
-        JSONArray users = new JSONArray(responseBody);
-        int id = 0;
-        for (int i = 0; i < users.length(); i++) {
-            JSONObject object = users.getJSONObject(i);
-            if ("Samantha".equalsIgnoreCase(object.getString("username"))) {
-                id = object.getInt("id");
-                System.out.println("username Samantha found with ID: " + id);
+    @Test(priority = 1)
+    public void searchTheUser() {
+        URI = "users";
+        List<usernameSearchResponseDTO> userList = this.requestGET(URI, null, usernameSearchResponseDTO.class);
+        try {
+            if (userList != null) {
+                user = userList.stream().filter(k -> k.getUsername().equals(dataConstants.USERNAME)).findFirst().get();
+                LOGGER.info(String.format("Username %s has ID %d", dataConstants.USERNAME, user.getId()));
+            } else {
+                LOGGER.info("User List received is empty");
             }
-            logger.info("username Samantha found with ID: " + id);
+        } catch (NoSuchElementException e) {
+            LOGGER.info(String.format("Username %s is not present in Http response", dataConstants.USERNAME));
         }
     }
 
-    @Test
-    void checkResponseTime() {
-        logger.info("_____________________checking response time____________________");
-        long responseTime = response.getTime();
-        logger.info(String.format("response time is --> %d", responseTime));
-        if (responseTime > 15000)
-            logger.warn("Response time is greater than 15000");
-        Assert.assertTrue(responseTime < 15000);
+    @Test(priority = 2)
+    public void searchPosts() {
+        this.searchTheUser();
+        URI = "posts";
+        param = new HashMap<String, String>();
+
+        if (user != null) {
+            param.put(dataConstants.PARAM_USER_ID, String.valueOf(user.getId()));
+
+            postList = this.requestGET(URI, param, usernameSearchResponseDTO.class);
+            if (hasElements(postList)) {
+                LOGGER.info(String.format("Username %s has posts %d", dataConstants.USERNAME, postList.size()));
+            } else {
+                LOGGER.warning(String.format("Username %s doesn't have any posts", dataConstants.USERNAME));
+            }
+        } else {
+            LOGGER.info(String.format("Username %s is not present in Http response", dataConstants.USERNAME));
+        }
     }
 
-    @AfterClass
-    void tearDown() {
-        logger.info("________________first test case passed, WE MOVE!!!_____________");
+    @Test(priority = 3)
+    public void fetchCommentAndvalidateEmail() {
+        searchTheUser();
+        searchPosts();
+        URI = "comments";
+        param = new HashMap<String, String>();
+        if (postList != null) {
+            postList.forEach(k -> {
+                param.put(dataConstants.PARAM_POST_ID, String.valueOf(k.getId()));
+                List<userPostCommentResponseDTO> commentList = this.requestGET(URI, param, userPostCommentResponseDTO.class);
+
+                if (hasElements(commentList)) {
+                    List<String> emailList = commentList.stream().map(userPostCommentResponseDTO::getEmail)
+                            .collect(Collectors.toList());
+                    this.validateEmailPattern(emailList);
+                    LOGGER.info(String.format("PostID %s with comments size %d has valid emails", k.getId(),
+                            commentList.size()));
+                } else {
+                    LOGGER.warning(String.format("PostID %s doesn't have any comments", k.getId()));
+                }
+            });
+        } else {
+            LOGGER.warning(String.format("Username %s doesn't have any posts", dataConstants.USERNAME));
+        }
+    }
+    protected void validateEmailPattern(List<String> email) {
+        Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile(dataConstants.EMAIL_REGEX,
+                Pattern.CASE_INSENSITIVE);
+        if (email != null) {
+            email.forEach(k -> {
+                Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(k);
+                Assert.assertTrue(matcher.find(), "Email syntax is not valid");
+            });
+        } else {
+            LOGGER.info("Email List received is empty");
+        }
     }
 
-
-//        System.out.println(id);
-//        response = httpRequest.request(Method.GET,"/posts");
-//        responseBody = response.getBody().asString();
-//        JSONArray posts = new JSONArray(responseBody);
-//        List<Integer> samanthaPosts = new ArrayList<>();
-//        for(int i=0; i<posts.length(); i++){
-//            JSONObject post = posts.getJSONObject(i);
-//            if(post.getInt("userId") == id){
-//                samanthaPosts.add(post.getInt("id"));
-//            }
-//        }
-//
-//        response = httpRequest.request(Method.GET, "/comments");
-//        responseBody = response.getBody().asString();
-//        JSONArray comments = new JSONArray(responseBody);
-//        for(int i=0; i<comments.length(); i++){
-//            JSONObject comment = comments.getJSONObject(i);
-//            if(samanthaPosts.contains(comment.getInt("postId"))){
-//                System.out.println(comment.getInt("postId"));
-//                System.out.println(comment.getString("email"));
-//            }
-//        }
-
-/////////////////////////////////////////////////////////////////////////
-//        var usernames = jsonpath.get("username");
-//        int i;
-//        int n = usernames.length;
-//        for(i=0; i<n; i++){
-//                if(jsonpath.[i]=="Samantha"){
-//                    System.out.println(i);
 }
-
-//System.out.println(usernames);
-
-
-//        JsonPath path = response.jsonPath();
-//
-//        List<HashMap<String, Object>> data = path.getList("username");
-//        for (HashMap<String, Object> singleObject : data) {
-//            if (singleObject.get("id").equals(3)){
-///               System.out.println(singleObject.get("username"));
-//            }
-//        }
-//    }
-//}
